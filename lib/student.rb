@@ -80,6 +80,6 @@ class Student
     sql = "SELECT * FROM students "
     random_grade = DB[:conn].execute(sql)
     random_grade.slice(x)
-    binding.pry 
+    #binding.pry 
   end 
 end

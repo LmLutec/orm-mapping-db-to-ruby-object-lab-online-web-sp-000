@@ -80,5 +80,6 @@ class Student
     sql = "SELECT * FROM students WHERE grade = ?"
     random_grade = DB[:conn].execute(sql)
     random_grade.slice(0,x)
+    binding.pry 
   end 
 end

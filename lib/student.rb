@@ -79,7 +79,7 @@ class Student
   def self.all_students_in_grade_X(x)
     sql = "SELECT * FROM students WHERE grade = x "
     random_grade = DB[:conn].execute(sql)
-    random_grade.slice(0,x)
+    random_grade.slice(x)
     binding.pry 
   end 
 end

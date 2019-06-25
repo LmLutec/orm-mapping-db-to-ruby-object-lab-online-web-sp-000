@@ -77,7 +77,7 @@ class Student
   end
   
   def self.all_students_in_grade_X(x)
-    sql = "SELECT * FROM students WHERE grade = ? "
+    sql = "SELECT * FROM students "
     random_grade = DB[:conn].execute(sql)
     random_grade.slice(x)
     binding.pry 

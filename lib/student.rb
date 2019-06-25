@@ -62,7 +62,6 @@ class Student
   def self.first_X_students_in_grade_10(x) 
     sql = "SELECT * FROM students WHERE grade = '10' "
     tenthgr_students = DB[:conn].execute(sql)
-    #binding.pry 
     tenthgr_students.slice(0,x)
   end 
   

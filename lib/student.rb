@@ -69,7 +69,6 @@ class Student
     sql = "SELECT * FROM students WHERE grade = 10 LIMIT 1"
     first_student = DB[:conn].execute(sql) 
       new_from_db(first_student[0]) 
-    end 
   end 
 
   def self.drop_table

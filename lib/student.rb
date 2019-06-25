@@ -68,9 +68,10 @@ class Student
   def self.first_student_in_grade_10 
     sql = "SELECT * FROM students WHERE grade = 10 LIMIT 1"
     first_student = DB[:conn].execute(sql) 
-    first_student.map do |student| 
-      new_from_db(student).first 
-    end 
+    binding.pry 
+    # first_student.map do |student| 
+    #   new_from_db(student).first 
+    # end 
   end 
 
   def self.drop_table
